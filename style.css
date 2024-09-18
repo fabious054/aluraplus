@@ -1,0 +1,229 @@
+:root{
+    --principal-white: #fff;
+    --secondary-gray: #C0C0C0;
+    --blue-button: #167BF7;
+    --backgroundColor: #00030C;
+    --principal-font: 'Inter', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--backgroundColor);
+    color: var(--principal-white);
+    font-family: var(--principal-font);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+section.principal{
+    background-image: url(./images/Background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    text-align: center;
+}
+section.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.container .containter__image{
+    margin: 1rem 0 2rem 0;
+}
+.container .container__principal_title{
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+.container .containter__box{
+    margin: 0 6rem;
+}
+
+.container .container__button{
+    text-decoration: none;
+    background-color: var(--blue-button);
+    color: var(--principal-white);
+    border-radius: 5px;
+    padding: 1rem;
+    display: block;
+    margin-bottom: 1rem;
+
+    transition: all .3s;
+}
+.container .container__button:hover{
+    background-color: #0F5FFA;
+}
+.container .container__button.second__button{
+    display: inline-block;
+    margin-top: 1rem;
+}
+.container .secondary_button{
+    text-decoration: none;
+    background-color:transparent;
+    color: var(--principal-white);
+    border: 1px solid var(--principal-white);
+    border-radius: 5px;
+    padding: 1rem;
+    display: block;
+}
+.container .container__warning{
+    color: var(--secondary-gray);
+    font-size: .8rem;
+}
+
+
+section.second{
+    align-items: center;
+    margin: 0 10rem;
+}
+.second.second__container_image{
+    width: 80%;
+}
+.second .container__description{
+    padding: 2rem;
+}
+.second .container__description .second__container_title{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--principal-white);
+    margin-bottom: .1rem;
+}
+.second .container__description .second__container_description{
+    color: var(--secondary-gray);
+}
+
+.devices{
+    text-align: center;
+}
+.devices .devices__title{
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--principal-white);
+}
+.devices .devices__list{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 5rem 0;
+}
+
+.devices .devices__list li{
+    font-size: 32px;
+    color: var(--principal-white);
+}
+
+.footer{
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer .footer_list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 1.5rem 0 1rem 0;
+}
+
+
+.footer .footer_list .footer_item a{
+    text-decoration: none;
+    color: var(--principal-white);
+}
+
+.footer .footer_text{
+    color: var(--secondary-gray);
+    font-size: .8rem;
+}
+
+/* segundo .footer .footer_text */
+.footer .footer_text:nth-of-type(2){
+    margin-top: .8rem;
+}
+
+
+/* TELAS MENORES QUE 1100PX */
+@media (max-width: 1100px){
+    section.container{
+        display: flex;
+        
+    }
+
+    section.second{
+        height: auto;
+        margin: 0 0;
+    }
+    .devices{
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 1010px){
+    section.container {
+        display: block;
+        text-align: center;
+        height: auto;
+        margin-top: 2rem;
+    }
+    section.principal {
+        background-size: cover;
+    }
+    .devices .devices__title{
+        font-size: 32px;
+    }
+    .devices .devices__list{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 700px){
+    .footer .footer_list{
+        flex-direction: column;
+    }
+    .footer .footer_list .footer_item:nth-child(4n){
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 550px){
+    .second__container_image{
+        width: 70%;
+    }
+}
+
+@media (max-width: 500px){
+    .container .containter__box{
+        margin: 0 1rem;
+    }
+    .container .container__principal_title{
+        font-size: 1rem;
+    }
+    .container .containter__image{
+        width: 75%;
+    }
+    .second .container__description .second__container_title{
+        font-size: 1.2rem;
+    }
+
+    .devices .devices__title{
+        font-size: 1.2rem;
+    }
+    .devices .devices__list{
+        margin: 0px;
+    }
+    .devices .devices__list .device__item img{
+        width: 55%;
+    }
+    .devices .devices__list .device__item .item{
+        font-size: 1rem;
+    }
+}
+
+img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all .5s;
+}
